@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package gravatar;
+ 
+
+service OrderService {
+	rpc Close(OrderRequest) returns (OrderResponse) {}
+}
+
+message OrderRequest {
+	int64 roomid = 1;
+	int64 orderid = 2;
+}
+
+message OrderResponse {
+	string txhash = 2;
+}

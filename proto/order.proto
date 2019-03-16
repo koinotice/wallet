@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package gravatar;
+
+service BetOrder {
+	rpc Close(CloseRequest) returns (CloseResponse) {}
+}
+
+message CloseRequest {
+	int64 roomid = 1;
+	int64 orderid = 2;
+}
+
+message CloseResponse {
+	string txhash = 2;
+}
